@@ -57,9 +57,12 @@ public class MainClass {
 
   private void printMismatch(BufferedWriter writer, SentenceLine sentenceLine,
     SentenceLine checkedSentenceLine, WordsMismatch wordsMismatch) throws IOException {
-    writer.write(sentenceLine.getLine() + "\n");
-    writer.write(checkedSentenceLine.getLine() + "\n");
+    writer.write(sentenceLine.getLine());
+    writer.newLine();
+    writer.write(checkedSentenceLine.getLine());
+    writer.newLine();
     writer.write("The changing word was: " + wordsMismatch.getFirstWord() + ", " +
-      wordsMismatch.getSecondWord() + "\n");
+      wordsMismatch.getSecondWord());
+    writer.newLine();
   }
 }
